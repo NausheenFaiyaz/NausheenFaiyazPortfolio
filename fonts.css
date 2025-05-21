@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "__handwritingTitle";
+  src: url(./fonts/1d259d87df01aa93-s.p.ttf) format("truetype");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "__handwritingText";
+  src: url(./fonts/5d1da943bd8329eb-s.p.ttf) format("truetype");
+  font-display: swap;
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "__handwritingText2";
+  src: url(./fonts/d65011811318cf4e-s.p.ttf) format("truetype");
+  font-display: swap;
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "Title";
+  src: url(./fonts/Title-Regular.woff2) format("woff2"),
+    url(./fonts/Title-Regular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Text_bold";
+  src: url(./fonts/Text_bold-Bold.woff2) format("woff2"),
+    url(./fonts/Text_bold-Bold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Text_regular";
+  src: url(./fonts/Text_regular-Regular.woff2) format("woff2"),
+    url(./fonts/Text_regular-Regular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
