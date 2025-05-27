@@ -162,3 +162,15 @@ const slider = function () {
   });
 };
 slider();
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const fullHeight = document.body.scrollHeight;
+
+  if (scrollTop + windowHeight >= fullHeight - 10) {
+    document.querySelector(".footer").classList.add("show");
+  } else {
+    document.querySelector(".footer").classList.remove("show");
+  }
+});

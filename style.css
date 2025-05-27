@@ -1494,10 +1494,11 @@ form textarea {
   height: 20rem;
   position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: -100px; /* hidden below screen */
+  /* bottom: 0; */
   width: 100%;
   background: var(--second-text-color);
-  z-index: -1;
+  z-index: -100;
   color: #fff;
   font-family: "Text_bold", "__handwritingText", cursive;
   display: flex;
@@ -1506,6 +1507,13 @@ form textarea {
   gap: 1rem;
   padding: 20px;
   font-size: 2rem;
+  transition: bottom 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.footer.show {
+  bottom: 0; /* slide up into view */
+  opacity: 1;
 }
 
 .footer-section {
@@ -1557,10 +1565,10 @@ p {
   .contact {
     border-bottom-left-radius: 3rem;
     border-bottom-right-radius: 3rem;
-    margin-bottom: 37rem;
+    margin-bottom: 30rem;
   }
   .footer {
-    height: 37rem;
+    height: 30rem;
     font-size: 1.7rem;
   }
   .footer-section {

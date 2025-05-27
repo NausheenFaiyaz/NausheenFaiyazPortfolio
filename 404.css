@@ -151,17 +151,26 @@ h1 {
   font-family: "Open Sans";
   font-weight: 400;
   padding: 20px;
-  background-color: #5e7fdc;
+  background-color: #ff72d9;
   color: white;
   width: 320px;
   margin: 0 auto;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 2rem;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 80px;
   margin-bottom: 50px;
   transition: all 0.2s linear;
+  text-decoration: none;
+
+}
+
+a, a:visited {
+    font-family: "Text_bold", "__handwritingText", cursive;
+
+  color: white;
+  text-decoration: none;
 }
 @media screen and (max-width: 400px) {
   .btn {
