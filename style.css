@@ -250,7 +250,7 @@ section {
 
 .home-img img {
   position: relative;
-  width: 25vw;
+  width: 20vw;
   cursor: pointer;
 }
 
@@ -479,8 +479,8 @@ button:active {
       font-size: 2.2rem;
     }
     .Home .home-img img {
-      width: 35vw;
-      margin-top: 2rem;
+      width: 200px;
+      margin-top: 1.5rem;
     }
     .typing-text span {
       font-size: 2.5rem;
@@ -495,7 +495,7 @@ button:active {
     font-size: 1em;
   }
   .Home .home-img img {
-    width: 200px;
+    width: 150px;
   }
   .home-content p {
     font-size: 2rem;
@@ -1376,7 +1376,7 @@ button:active {
 }
 
 .contact .contact-left .sub-title img {
-  width: 5rem;
+  width: 10rem;
 }
 .contact .contact-left p {
   margin-top: 1rem;
