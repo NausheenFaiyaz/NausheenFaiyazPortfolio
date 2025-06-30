@@ -46,11 +46,11 @@ html::-webkit-scrollbar-thumb {
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 1000;
-  background-image: url("logo/ninja2.png"); /* Initial image */
+  background-image: url("logo/ninja2.webp"); /* Initial image */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  transition: transform 0.3s ease, background-image 0.5s ease;
+  transition: transform 0.3s ease, background-image 0.3s ease;
 }
 
 .header {

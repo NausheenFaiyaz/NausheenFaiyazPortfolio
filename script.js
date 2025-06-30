@@ -14,8 +14,8 @@ let currentImage = 0;
 setInterval(() => {
   currentImage = (currentImage + 1) % images.length;
   cursor.style.backgroundImage = `url('${images[currentImage]}')`;
-  cursor.style.transition = "transform 0.3s ease, background-image 0.5s ease";
-}, 2500); // every 3 seconds
+  cursor.style.transition = "transform 0.3s ease, background-image 0.3s ease";
+}, 2500); // every 2.5 seconds
 
 // Smooth follow effect
 let mouseX = 0,
