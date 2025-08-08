@@ -9,6 +9,7 @@
 }
 
 :root {
+  /* --bg-color: #4cc9f0; */
   --bg-color: #964cbb;
   --text-color: #fff;
   --second-text-color: #000;
@@ -671,20 +672,22 @@ button:active {
 }
 @media (max-width: 1200px) and (min-width: 475px) {
   .service .container {
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
     gap: 15rem;
     margin-top: 10rem;
+    transition: 2s ease;
   }
   .service .container .box {
-    height: 400px;
-    width: 400px;
+    height: 320px;
+    width: 320px;
   }
   .service .container .box img {
     width: 12rem;
-    top: 150px;
+    top: 100px;
   }
   .service .container .box:hover img {
-    top: -120px;
+    top: -100px;
   }
   .service .container .box .content h2 {
     font-size: 4rem;
@@ -1385,13 +1388,12 @@ button:active {
   font-family: "Text_bold", "__handwritingText", cursive;
 }
 .contact .contact-left p img {
-  margin-right: 1rem;
   width: 5rem;
 }
 .contact .contact-left p a {
   text-decoration: none;
-  color: var(--second-text-color);
-  font-size: 2rem;
+  color: #7f3d9f;
+  font-size: 2.5rem;
 }
 
 .contact .contact-right form {
@@ -1544,10 +1546,10 @@ p {
   .contact {
     border-bottom-left-radius: 5rem;
     border-bottom-right-radius: 5rem;
-    margin-bottom: 27rem;
+    margin-bottom: 30rem;
   }
   .footer {
-    height: 27rem;
+    height: 30rem;
   }
 }
 
@@ -1555,20 +1557,20 @@ p {
   .contact {
     border-bottom-left-radius: 3rem;
     border-bottom-right-radius: 3rem;
-    margin-bottom: 32rem;
+    margin-bottom: 33rem;
   }
   .footer {
-    height: 32rem;
+    height: 33rem;
   }
 }
 @media (max-width: 433px) {
   .contact {
     border-bottom-left-radius: 3rem;
     border-bottom-right-radius: 3rem;
-    margin-bottom: 30rem;
+    margin-bottom: 32rem;
   }
   .footer {
-    height: 30rem;
+    height: 32rem;
     font-size: 1.7rem;
   }
   .footer-section {
