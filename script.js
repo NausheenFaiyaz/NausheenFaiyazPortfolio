@@ -174,3 +174,7 @@ window.addEventListener("scroll", () => {
     document.querySelector(".footer").classList.remove("show");
   }
 });
+
+document.getElementById("contactForm").onsubmit = function () {
+  setTimeout(() => this.reset(), 50); // clears after submission
+};
