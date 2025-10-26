@@ -1,3 +1,20 @@
+const lenis = new Lenis({
+  anchors: {
+    offset: 0,
+  },
+  autoRaf: true,
+  anchor: true,
+  duration: 5,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
 //moving cursor animation
 const cursor = document.getElementById("cursor");
 
@@ -49,7 +66,7 @@ let navlinks = document.querySelectorAll("header nav a");
 window.onscroll = () => {
   sections.forEach((sec) => {
     let top = window.scrollY;
-    let offset = sec.offsetTop - 170;
+    let offset = sec.offsetTop - 200;
     let height = sec.offsetHeight;
     let id = sec.getAttribute("id");
 
