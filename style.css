@@ -9,19 +9,15 @@
 }
 
 :root {
-  /* --bg-color: #4cc9f0; */
   --bg-color: #964cbb;
   --text-color: #fff;
   --second-text-color: #000;
   --third-text-color: #fff185;
   --main-color: #fe5d9f;
-  --cards: 4;
-  --cardHeight: 87vh;
-  --cardTopPadding: 1.5em;
-  --cardMargin: 4vw;
 }
 
 html {
+  cursor: inherit;
   font-size: 65.5%;
   overflow-x: hidden;
   scroll-behavior: auto;
@@ -69,6 +65,7 @@ html::-webkit-scrollbar-thumb {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  cursor: url("./stickers/cursorPink.webp") 4 12, auto;
 }
 
 .logo {
@@ -76,7 +73,7 @@ html::-webkit-scrollbar-thumb {
   /* font-family: "Title", "__handwritingTitle", cursive; */
   font-family: "Text_regular", "__handwritingText2", cursive;
   color: var(--text-color);
-  cursor: pointer;
+  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
   transition: 0.5s ease;
 }
 .logo span {
@@ -104,6 +101,7 @@ html::-webkit-scrollbar-thumb {
   font-weight: 500;
   transition: 0.3s ease;
   border-bottom: 3px solid transparent;
+  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
 }
 
 .navbar a .nav-img {
@@ -140,7 +138,7 @@ html::-webkit-scrollbar-thumb {
 
   #menu-icon {
     display: block;
-    cursor: pointer;
+    cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
   }
 
   .navbar {
@@ -182,12 +180,12 @@ html::-webkit-scrollbar-thumb {
 
 @media (max-width: 500px) {
   .logo {
-  font-size: 4rem;
-}
-.logo span {
-  font-size: 5rem;
-  font-weight: 800;
-}
+    font-size: 4rem;
+  }
+  .logo span {
+    font-size: 5rem;
+    font-weight: 800;
+  }
   .cursor {
     display: none;
   }
@@ -256,6 +254,7 @@ section {
   justify-content: center;
   align-items: center;
   gap: 8rem;
+  cursor: url("./stickers/cursorPink.webp") 4 12, auto;
   background-color: var(--second-text-color);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23cfcfcf' stroke-width='1' stroke-opacity='0.1' stroke-dasharray='2,1'%3E%3Cpath d='M0 20L20 20M20 0L20 20M0 0L20 0M0 20L0 0'/%3E%3C/g%3E%3C/svg%3E");
 }
@@ -263,7 +262,7 @@ section {
 .home-img img {
   position: relative;
   width: 20vw;
-  cursor: pointer;
+  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
 }
 
 .Home .home-content h1 {
@@ -287,11 +286,12 @@ section {
   font-family: "Title", "__handwritingTitle", cursive;
 }
 
-.home-content p {
-  font-size: 2.5rem;
+.home-content .about {
+  font-size: 2.7rem;
   font-weight: 400;
   color: var(--third-text-color);
-  font-family: "Text_bold", "__handwritingText", cursive;
+  /* font-family: "Text_bold", "__handwritingText", cursive; */
+  font-family: "__handwritingTitle", "__handwritingText2", cursive;
   padding-right: 5rem;
 }
 
@@ -308,6 +308,7 @@ section {
   color: var(--main-color);
   margin: 3rem 1.5rem 3rem 0;
   transition: 0.5s ease;
+  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
 }
 
 .Home .social-icon a:hover {
@@ -334,7 +335,7 @@ section {
   color: var(--main-color);
   font-size: 1.5em;
   font-weight: 600;
-  cursor: pointer;
+  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
   overflow: hidden;
   transition: border 300ms, color 300ms;
   user-select: none;
@@ -342,17 +343,22 @@ section {
 
 .button p {
   z-index: 1;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Text_bold", "__handwritingText", cursive;
 }
 .button p a {
   z-index: 1;
   text-decoration: none;
   color: var(--main-color);
+  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
 }
 
 .button:hover a {
   color: black;
   box-shadow: 0 0 25px var(--main-color);
   transition: all 0.5s;
+  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
 }
 
 button:active {
@@ -483,21 +489,20 @@ button:active {
       margin: 0rem 0.5rem;
     }
     .Home .home-content h3 {
-      font-size: 3rem;
+      font-size: 3.5rem;
     }
     .Home .home-content h1 {
       font-size: 4rem;
     }
-    .home-content p {
-      font-size: 2.2rem;
-
+    .home-content .about {
+      font-size: 2.6rem;
     }
     .Home .home-img img {
       width: 200px;
       margin-top: 1.5rem;
     }
     .typing-text span {
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
     .typing-text span::after {
       height: 3.5rem;
@@ -511,8 +516,14 @@ button:active {
   .Home .home-img img {
     width: 150px;
   }
-  .home-content p {
-    font-size: 2rem;
+  .Home .home-content h3 {
+    font-size: 3.3rem;
+  }
+  .typing-text span {
+    font-size: 2.8rem;
+  }
+  .home-content .about {
+    font-size: 2.5rem;
     padding: 0;
   }
 }
@@ -520,6 +531,8 @@ button:active {
 /*Services*/
 .service {
   background: var(--main-color);
+  cursor: url("./stickers/cursorBlack.webp") 4 12, auto;
+
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23cfcfcf' stroke-width='1' stroke-opacity='0.4' stroke-dasharray='2,1'%3E%3Cpath d='M0 20L20 20M20 0L20 20M0 0L20 0M0 20L0 0'/%3E%3C/g%3E%3C/svg%3E");
 }
 .heading {
@@ -542,14 +555,13 @@ button:active {
 }
 
 @media (max-width: 500px) {
-.heading{
-  font-size: 5.5rem;
-  gap: 0.5rem;
-}
-.heading img {
-  width: 5.5rem;
-}
-
+  .heading {
+    font-size: 5.5rem;
+    gap: 0.5rem;
+  }
+  .heading img {
+    width: 5.5rem;
+  }
 }
 
 .service .container {
@@ -611,6 +623,7 @@ button:active {
   transition: 0.5s;
   text-align: center;
   font-family: "Text_bold", "__handwritingText", cursive;
+  font-family: "__handwritingTitle", "__handwritingText2", cursive;
 }
 .service .container .box:hover .content {
   opacity: 1;
@@ -748,6 +761,7 @@ button:active {
 
 .line {
   background: var(--main-color);
+  cursor: url("./stickers/cursorBlack.webp") 4 12, auto;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23cfcfcf' stroke-width='1' stroke-opacity='0.4' stroke-dasharray='2,1'%3E%3Cpath d='M0 20L20 20M20 0L20 20M0 0L20 0M0 20L0 0'/%3E%3C/g%3E%3C/svg%3E");
 }
 
@@ -777,6 +791,7 @@ button:active {
 /*Skills*/
 .skills {
   background: var(--main-color);
+  cursor: url("./stickers/cursorBlack.webp") 4 12, auto;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23cfcfcf' stroke-width='1' stroke-opacity='0.4' stroke-dasharray='2,1'%3E%3Cpath d='M0 20L20 20M20 0L20 20M0 0L20 0M0 20L0 0'/%3E%3C/g%3E%3C/svg%3E");
 }
 
@@ -809,7 +824,6 @@ button:active {
   /* padding: 10px; */
   border-radius: 1rem;
   transition: 0.3s ease;
-  cursor: pointer;
   height: 22rem;
   opacity: 0;
   transform: translateY(3rem);
@@ -873,11 +887,12 @@ button:active {
 
 /* Education */
 .education {
+  cursor: url("./stickers/cursorPink.webp") 4 12, auto;
   background-color: var(--second-text-color);
 }
 
-.education .heading{
-  color:var(--main-color);
+.education .heading {
+  color: var(--main-color);
 }
 
 .education .timeline {
@@ -904,6 +919,7 @@ button:active {
   background-color: inherit;
   width: 50%;
   z-index: 10;
+  cursor: url("./stickers/cursorBlack.webp") 4 12, auto;
 }
 
 .education .container::after {
@@ -1110,6 +1126,7 @@ button:active {
 .project {
   padding: 2rem;
   background: var(--main-color);
+  cursor: url("./stickers/cursorBlack.webp") 4 12, auto;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23cfcfcf' stroke-width='1' stroke-opacity='0.4' stroke-dasharray='2,1'%3E%3Cpath d='M0 20L20 20M20 0L20 20M0 0L20 0M0 20L0 0'/%3E%3C/g%3E%3C/svg%3E");
 }
 
@@ -1170,6 +1187,7 @@ button:active {
   margin-bottom: 2rem;
   color: var(--second-text-color);
   font-family: "Text_bold", "__handwritingText", cursive;
+  font-family: "__handwritingTitle", "__handwritingText2", cursive;
 }
 .project-section .img {
   display: flex;
@@ -1184,20 +1202,47 @@ button:active {
   box-sizing: border-box;
 }
 
-.img a {
+.btn-container{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--third-text-color);
-  color: var(--second-text-color);
-  border: 3px dashed var(--second-text-color);
-  height: 3.5rem;
-  width: 12rem;
-  font-size: 1.5rem;
-  margin-top: 1.5rem;
-  border-radius: 1rem;
-  font-weight: 600;
+  margin-top: 15px;
+  gap: 12px;
 }
+
+.prj-btn {
+  width: 150px;
+  padding: 0;
+  border: none;
+  transform: rotate(5deg);
+  transform-origin: center;
+  /* font-family: "Gochi Hand", cursive; */
+  font-family: "Text_bold", "__handwritingText", cursive;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 #494a4b;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: var(--third-text-color);
+}
+.prj-btn a{
+  color: var(--second-text-color);
+}
+
+.prj-btn span {
+  background: #f1f5f8;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 2px solid #494a4b;
+}
+
+.prj-btn:active {
+  transform: translateY(5px);
+  padding-bottom: 0px;
+  outline: 0;
+}
+
 
 .slider__btn {
   position: absolute;
@@ -1207,7 +1252,7 @@ button:active {
   z-index: 10;
   border: none;
   background: transparent;
-  cursor: pointer;
+  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
 }
 
 .slider__btn img {
@@ -1226,7 +1271,6 @@ button:active {
 
 @media (max-width: 600px) and (min-width: 500px) {
   .project .slider {
-    margin-top: 5rem;
     width: 100%;
     min-height: 60rem;
   }
@@ -1239,17 +1283,31 @@ button:active {
     width: 80%;
   }
   .prj-heading {
-    font-size: 4rem;
+    font-size: 4.2rem;
     margin-bottom: 2rem;
   }
 
   .project__info {
-    font-size: 2rem;
+    font-size: 2.3rem;
     margin-bottom: 3rem;
   }
   .project-img {
-    width: 95%;
+    width: 100%;
   }
+
+  .prj-btn {
+  width: 100px;
+  font-size: 18px;
+  padding-bottom: 1.5px;
+}
+
+
+.prj-btn span {
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  border: 1.5px solid #494a4b;
+}
+
 
   .slider__btn {
     width: 4.5rem;
@@ -1261,8 +1319,6 @@ button:active {
     padding: 2rem;
   }
   .project .slider {
-    margin-top: 5rem;
-
     width: 100%;
     min-height: 60rem;
   }
@@ -1275,28 +1331,35 @@ button:active {
   }
 
   .prj-heading {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 0.5rem;
   }
 
   .project__info {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 4rem;
   }
   .project-img {
-    width: 95%;
+    width: 100%;
   }
-  .img a {
-    width: 10rem;
-    font-size: 1.2rem;
-    margin-top: 4rem;
-    margin-bottom: 1rem;
-  }
+
+  .prj-btn {
+  width: 100px;
+  font-size: 18px;
+  padding-bottom: 1.5px;
+}
+
+
+.prj-btn span {
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  border: 1.5px solid #494a4b;
+}
 
   .slider__btn {
     width: 4rem;
     height: 4rem;
-    top: 85%;
+    top: 95%;
   }
 
   .slider__btn--left {
@@ -1314,7 +1377,6 @@ button:active {
     padding: 1rem;
   }
   .project .slider {
-    margin-top: 5rem;
     width: 100%;
     min-height: 60rem;
   }
@@ -1327,40 +1389,48 @@ button:active {
     top: -2rem;
     left: -3rem;
     line-height: 0.5;
-    font-size: 10rem;
+    font-size: 15rem;
   }
 
   .prj-heading {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 2rem;
   }
 
   .project__info {
-    font-size: 2rem;
+    font-size: 2.3rem;
     margin-bottom: 3rem;
   }
   .project-img {
     width: 100%;
   }
-  .img a {
-    width: 10rem;
-    font-size: 1.2rem;
-    margin-top: 4rem;
-    margin-bottom: 1rem;
-  }
+
+  .prj-btn {
+  width: 100px;
+  font-size: 16px;
+  padding-bottom: 1.5px;
+}
+
+
+.prj-btn span {
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  border: 1.5px solid #494a4b;
+}
+
   .slider__btn {
-    width: 3.5rem;
-    height: 3.5rem;
-    top: 85%;
+    width: 3.8rem;
+    height: 3.8rem;
+    top: 95%;
   }
 
   .slider__btn--left {
-    left: 20%;
+    left: 30%;
     transform: translate(-50%, -50%);
   }
 
   .slider__btn--right {
-    right: 20%;
+    right: 30%;
     transform: translate(50%, -50%);
   }
 }
@@ -1369,10 +1439,11 @@ button:active {
 
 .contact {
   background: var(--main-color);
+  cursor: url("./stickers/cursorBlack.webp") 4 12, auto;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23cfcfcf' stroke-width='1' stroke-opacity='0.4' stroke-dasharray='2,1'%3E%3Cpath d='M0 20L20 20M20 0L20 20M0 0L20 0M0 20L0 0'/%3E%3C/g%3E%3C/svg%3E");
   border-bottom-left-radius: 7rem;
   border-bottom-right-radius: 7rem;
-  margin-bottom: 20rem;
+  margin-bottom: 21rem;
 }
 .contact .container {
   padding: 2rem;
@@ -1422,8 +1493,9 @@ button:active {
 }
 .contact .contact-left p a {
   text-decoration: none;
-  color: #7f3d9f;
+  color: var(--second-text-color);
   font-size: 2.5rem;
+  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
 }
 
 .contact .contact-right form {
@@ -1450,6 +1522,7 @@ textarea::placeholder {
   color: var(--main-color);
   margin: 3rem 1.5rem 3rem 0;
   transition: 0.3s ease;
+  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
 }
 
 .contact .social-icon a:hover {
@@ -1492,15 +1565,18 @@ form textarea {
   border-radius: 10px;
   transition: ease-in-out 0.5s;
   font-family: "Text_bold", "__handwritingText", cursive;
+  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
 }
 .btn-cv:hover {
   background: var(--main-color);
   box-shadow: 0 0 25px var(--main-color);
+  border: 2px solid var(--second-text-color);
 }
 .btn-cv a {
   color: var(--main-color);
   font-size: 1.8rem;
   font-weight: 500;
+  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
 }
 .btn-cv:hover a {
   color: #000000;
@@ -1523,7 +1599,7 @@ form textarea {
 }
 
 .footer {
-  height: 20rem;
+  height: 21rem;
   position: fixed;
   left: 0;
   bottom: -100px; /* hidden below screen */
@@ -1541,6 +1617,7 @@ form textarea {
   font-size: 2rem;
   transition: bottom 0.5s ease-in-out, opacity 0.5s ease-in-out;
   opacity: 0;
+  cursor: url("./stickers/cursorPink.webp") 4 12, auto;
 }
 
 .footer.show {
@@ -1576,10 +1653,10 @@ p {
   .contact {
     border-bottom-left-radius: 5rem;
     border-bottom-right-radius: 5rem;
-    margin-bottom: 30rem;
+    margin-bottom: 32rem;
   }
   .footer {
-    height: 30rem;
+    height: 32rem;
   }
 }
 
@@ -1587,10 +1664,10 @@ p {
   .contact {
     border-bottom-left-radius: 3rem;
     border-bottom-right-radius: 3rem;
-    margin-bottom: 33rem;
+    margin-bottom: 34rem;
   }
   .footer {
-    height: 33rem;
+    height: 34rem;
   }
 }
 @media (max-width: 433px) {
