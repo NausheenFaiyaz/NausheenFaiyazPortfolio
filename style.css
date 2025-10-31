@@ -70,7 +70,6 @@ html::-webkit-scrollbar-thumb {
 
 .logo {
   font-size: 5rem;
-  /* font-family: "Title", "__handwritingTitle", cursive; */
   font-family: "Text_regular", "__handwritingText2", cursive;
   color: var(--text-color);
   cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
@@ -290,7 +289,6 @@ section {
   font-size: 2.7rem;
   font-weight: 400;
   color: var(--third-text-color);
-  /* font-family: "Text_bold", "__handwritingText", cursive; */
   font-family: "__handwritingTitle", "__handwritingText2", cursive;
   padding-right: 5rem;
 }
@@ -541,7 +539,6 @@ button:active {
   align-items: center;
   text-align: center;
   font-size: 7rem;
-  /* font-family: "Title", "__handwritingTitle", cursive; */
   font-family: "Text_regular", "__handwritingText2", cursive;
   gap: 0.8rem;
 }
