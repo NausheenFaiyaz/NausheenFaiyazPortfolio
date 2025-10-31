@@ -1223,6 +1223,7 @@ button:active {
   background-color: var(--third-text-color);
 }
 .prj-btn a{
+  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
   color: var(--second-text-color);
 }
 
