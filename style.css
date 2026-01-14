@@ -311,9 +311,30 @@ section {
 
 .Home .social-icon a:hover {
   color: black;
-  transform: scale(1.3) translateY(-5px);
+  transform: scale(1.2) translateY(-5px);
   box-shadow: 0 0 25px var(--bg-color);
   background: var(--main-color);
+}
+
+[data-tooltip]:hover:after {
+  opacity: 1;
+  transition: all 0.2s ease 0.4s;
+  visibility: visible;
+  transform: scale(1);
+  background: var(--main-color);
+}
+[data-tooltip]:after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -25px;
+  padding: 3px;
+  color: var(--second-text-color);
+  border-radius: 3px;
+  transform: scale(0);
+  font-family: "__handwritingTitle";
+  text-align: center;
+  transition: transform 0.3s ease;
+  font-size: 12px;
 }
 
 .home-btn {
@@ -563,196 +584,116 @@ button:active {
 
 .service .container {
   position: relative;
-  margin-top: 10rem;
+  margin: 0;
+  padding: 0;
+  margin-top: 15rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 5rem;
 }
 
-.service .container .box {
-  position: relative;
-  top: 0;
-  width: 360px;
-  height: 360px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  background: var(--clr);
-  padding: 5rem;
-  transition: 0.5s ease;
+.service .card {
+  font-family: Montserrat, sans-serif;
+  width: 350px;
+  height: 300px;
+  translate: -6px -6px;
+  background: var(--third-text-color);
+  border: 3px solid #000000;
+  box-shadow: 12px 12px 0 #000000;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-.service .container .box:hover {
-  top: 100px;
+.service .head {
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  width: 100%;
+  height: 32px;
+  background: #ffffff;
+  padding: 5px 12px;
+  color: #000000;
+  border-bottom: 3px solid #000000;
 }
 
-.service .container .box::before {
-  content: "";
-  position: absolute;
-  inset: 5rem 5rem 5rem 5rem;
-  border-radius: 2rem;
-  border: 5px solid var(--second-text-color);
-  filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
-  pointer-events: none;
-  transition: 0.5s;
-  z-index: 1;
-}
-.service .container .box:hover::before {
-  inset: -20rem 3rem 3rem 3rem;
-}
-
-.service .container .box img {
-  width: 10rem;
-  position: absolute;
-  z-index: 10;
-  top: 110px;
-  /* max-width: 90px; */
-  transition: 0.5s;
-  filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
-}
-.service .container .box:hover img {
-  top: -150px;
-}
-.service .container .box .content {
-  opacity: 0;
-  transition: 0.5s;
-  text-align: center;
-  font-family: "Text_bold", "__handwritingText", cursive;
+.service .content {
+  padding: 8px 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--second-text-color);
+  /* font-family: "Text_bold", "__handwritingText", cursive; */
   font-family: "__handwritingTitle", "__handwritingText2", cursive;
 }
-.service .container .box:hover .content {
-  opacity: 1;
-}
-.service .container .box .content h2 {
-  font-size: 3rem;
-  text-decoration: underline;
+
+.service-button {
+  padding: 5px 10px;
+  margin-top: 10px;
+  border: 3px solid #000000;
+  box-shadow: 3px 3px 0 #000000;
+  font-weight: 750;
   color: var(--second-text-color);
-  text-align: center;
-}
-.service .container .box .content p {
-  color: var(--second-text-color);
-  text-align: center;
-  font-size: 2rem;
-  margin: 1rem 0;
+  background: var(--main-color);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.service .container .box span {
-  position: absolute;
-  inset: 0;
-  rotate: calc(var(--i) * 90deg);
+.service-button:hover {
+  translate: 1.5px 1.5px;
+  box-shadow: 1.5px 1.5px 0 #000000;
+  color: var(--text-color);
+  background: var(--bg-color);
 }
-.service .container .box span::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-repeat: repeat;
-  height: 25px;
-  background-image: radial-gradient(
-    circle at 10px 15px,
-    var(--main-color) 12px,
-    transparent 13px
-  );
-  background-size: 40px 20px;
-  animation: animate 0.5s linear infinite;
-  animation-play-state: paused;
-}
-.service .container .box span::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-repeat: repeat;
-  height: 20px;
-  background-image: radial-gradient(
-    circle at 10px -5px,
-    transparent 12px,
-    var(--main-color) 13px
-  );
 
-  background-size: 20px 20px;
-  animation: animate 0.5s linear infinite;
-  animation-play-state: paused;
+.service-button:active {
+  translate: 3px 3px;
+  box-shadow: 0 0 0 #000000;
 }
-.service .container .box:hover span::before,
-.service .container .box:hover span::after {
-  animation-play-state: running;
+
+.service .card:hover {
+  translate: -6px;
 }
-@keyframes animate {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 40px 0;
-  }
-}
+
 @media (max-width: 1400px) and (min-width: 1200px) {
   .service .container {
-    margin-top: 10rem;
-  }
-  .service .container .box {
-    height: 300px;
-    width: 300px;
-  }
-  .service .container .box:hover img {
-    top: -120px;
-  }
-  .service .container .box .content h2 {
-    font-size: 2.8rem;
-  }
-  .service .container .box .content p {
-    font-size: 2rem;
-  }
-}
-@media (max-width: 1200px) and (min-width: 475px) {
-  .service .container {
-    /* flex-direction: column; */
-    flex-wrap: wrap;
-    gap: 15rem;
-    margin-top: 10rem;
     transition: 2s ease;
   }
-  .service .container .box {
-    height: 320px;
-    width: 320px;
+}
+@media (max-width: 1200px) and (min-width: 800px) {
+  .service .container {
+    margin-top: 8rem;
+    transition: 2s ease;
   }
-  .service .container .box img {
-    width: 12rem;
-    top: 100px;
+  .service .container .card {
+    width: 325px;
+    height: 275px;
   }
-  .service .container .box:hover img {
-    top: -100px;
+}
+@media (max-width: 800px) and (min-width: 475px) {
+  .service .container {
+    /* flex-direction: column; */
+    margin-top: 5rem;
+    transition: 2s ease;
   }
-  .service .container .box .content h2 {
-    font-size: 4rem;
-    margin-top: 1rem;
-  }
-  .service .container .box .content p {
-    margin-top: 1rem;
-    font-size: 2rem;
+  .service .container .card {
+    width: 325px;
+    height: 275px;
   }
 }
 @media (max-width: 475px) {
   .service .container {
-    flex-direction: column;
-    gap: 15rem;
-    margin-top: 8rem;
+    /* flex-direction: column; */
+    margin-top: 3rem;
+    transition: 2s ease;
   }
-  .service .container .box {
-    height: 300px;
+  .service .container .card {
     width: 300px;
+    height: 250px;
+    box-shadow: 10px 10px 0 #000000;
   }
-  .service .container .box:hover img {
-    top: -100px;
-  }
-  .service .container .box .content h2 {
-    font-size: 3rem;
-  }
-  .service .container .box .content p {
-    margin-top: 2.3rem;
-    font-size: 1.8rem;
+  .service .content {
+    font-size: 16px;
   }
 }
 
@@ -1199,7 +1140,7 @@ button:active {
   box-sizing: border-box;
 }
 
-.btn-container{
+.btn-container {
   display: flex;
   margin-top: 15px;
   gap: 12px;
@@ -1222,7 +1163,7 @@ button:active {
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   background-color: var(--third-text-color);
 }
-.prj-btn a{
+.prj-btn a {
   cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
   color: var(--second-text-color);
 }
@@ -1240,7 +1181,6 @@ button:active {
   padding-bottom: 0px;
   outline: 0;
 }
-
 
 .slider__btn {
   position: absolute;
@@ -1294,18 +1234,16 @@ button:active {
   }
 
   .prj-btn {
-  width: 100px;
-  font-size: 18px;
-  padding-bottom: 1.5px;
-}
+    width: 100px;
+    font-size: 18px;
+    padding-bottom: 1.5px;
+  }
 
-
-.prj-btn span {
-  padding: 0.3rem 0.8rem;
-  border-radius: 5px;
-  border: 1.5px solid #494a4b;
-}
-
+  .prj-btn span {
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    border: 1.5px solid #494a4b;
+  }
 
   .slider__btn {
     width: 4.5rem;
@@ -1342,17 +1280,16 @@ button:active {
   }
 
   .prj-btn {
-  width: 100px;
-  font-size: 18px;
-  padding-bottom: 1.5px;
-}
+    width: 100px;
+    font-size: 18px;
+    padding-bottom: 1.5px;
+  }
 
-
-.prj-btn span {
-  padding: 0.3rem 0.8rem;
-  border-radius: 5px;
-  border: 1.5px solid #494a4b;
-}
+  .prj-btn span {
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    border: 1.5px solid #494a4b;
+  }
 
   .slider__btn {
     width: 4rem;
@@ -1404,17 +1341,16 @@ button:active {
   }
 
   .prj-btn {
-  width: 100px;
-  font-size: 16px;
-  padding-bottom: 1.5px;
-}
+    width: 100px;
+    font-size: 16px;
+    padding-bottom: 1.5px;
+  }
 
-
-.prj-btn span {
-  padding: 0.3rem 0.8rem;
-  border-radius: 5px;
-  border: 1.5px solid #494a4b;
-}
+  .prj-btn span {
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    border: 1.5px solid #494a4b;
+  }
 
   .slider__btn {
     width: 3.8rem;
@@ -1525,10 +1461,19 @@ textarea::placeholder {
 
 .contact .social-icon a:hover {
   color: black;
-  transform: scale(1.3) translateY(-5px);
+  transform: scale(1.2) translateY(-4px);
   box-shadow: 0 0 25px var(--bg-color);
   background: var(--main-color);
 }
+
+
+.contact .social-icon [data-tooltip]:hover:after {
+  background: var(--second-text-color);
+}
+.contact .social-icon [data-tooltip]:after {
+  color: var(--main-color);
+}
+
 form input,
 form textarea {
   width: 100%;
@@ -1557,27 +1502,21 @@ form textarea {
 .btn-cv {
   display: inline-block;
   padding: 1rem 2rem;
-  background: transparent;
   color: black;
-  border: 2px solid var(--main-color);
   border-radius: 10px;
+  background: var(--main-color);
+  box-shadow: 0 0 25px var(--main-color);
+  border: 2px solid var(--second-text-color);
   transition: ease-in-out 0.5s;
   font-family: "Text_bold", "__handwritingText", cursive;
   cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
 }
-.btn-cv:hover {
-  background: var(--main-color);
-  box-shadow: 0 0 25px var(--main-color);
-  border: 2px solid var(--second-text-color);
-}
+
 .btn-cv a {
-  color: var(--main-color);
+  color: var(--second-text-color);
   font-size: 1.8rem;
   font-weight: 500;
   cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
-}
-.btn-cv:hover a {
-  color: #000000;
 }
 
 @media screen and (max-width: 600px) {
