@@ -9,7 +9,7 @@
 }
 
 :root {
-  --bg-color: #964cbb;
+  --bg-color: #b073d5;
   --text-color: #fff;
   --second-text-color: #000;
   --third-text-color: #fff185;
@@ -49,7 +49,9 @@ html::-webkit-scrollbar-thumb {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  transition: transform 0.3s ease, background-image 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background-image 0.3s ease;
 }
 
 .header {
@@ -65,14 +67,18 @@ html::-webkit-scrollbar-thumb {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-  cursor: url("./stickers/cursorPink.webp") 4 12, auto;
+  cursor:
+    url("./stickers/cursorPink.webp") 4 12,
+    auto;
 }
 
 .logo {
   font-size: 5rem;
   font-family: "Text_regular", "__handwritingText2", cursive;
   color: var(--text-color);
-  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
+  cursor:
+    url("./stickers/pointerPink.webp") 4 12,
+    pointer;
   transition: 0.5s ease;
 }
 .logo span {
@@ -100,7 +106,9 @@ html::-webkit-scrollbar-thumb {
   font-weight: 500;
   transition: 0.3s ease;
   border-bottom: 3px solid transparent;
-  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
+  cursor:
+    url("./stickers/pointerPink.webp") 4 12,
+    pointer;
 }
 
 .navbar a .nav-img {
@@ -137,7 +145,9 @@ html::-webkit-scrollbar-thumb {
 
   #menu-icon {
     display: block;
-    cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
+    cursor:
+      url("./stickers/pointerPink.webp") 4 12,
+      pointer;
   }
 
   .navbar {
@@ -245,7 +255,9 @@ section {
   min-height: 100vh;
   padding: 3rem;
   overflow-x: hidden;
-  transition: transform 1s, opacity 1s;
+  transition:
+    transform 1s,
+    opacity 1s;
 }
 
 .Home {
@@ -253,7 +265,9 @@ section {
   justify-content: center;
   align-items: center;
   gap: 8rem;
-  cursor: url("./stickers/cursorPink.webp") 4 12, auto;
+  cursor:
+    url("./stickers/cursorPink.webp") 4 12,
+    auto;
   background-color: var(--second-text-color);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23cfcfcf' stroke-width='1' stroke-opacity='0.1' stroke-dasharray='2,1'%3E%3Cpath d='M0 20L20 20M20 0L20 20M0 0L20 0M0 20L0 0'/%3E%3C/g%3E%3C/svg%3E");
 }
@@ -261,7 +275,9 @@ section {
 .home-img img {
   position: relative;
   width: 20vw;
-  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
+  cursor:
+    url("./stickers/pointerPink.webp") 4 12,
+    pointer;
 }
 
 .Home .home-content h1 {
@@ -306,7 +322,9 @@ section {
   color: var(--main-color);
   margin: 3rem 1.5rem 3rem 0;
   transition: 0.5s ease;
-  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
+  cursor:
+    url("./stickers/pointerPink.webp") 4 12,
+    pointer;
 }
 
 .Home .social-icon a:hover {
@@ -354,9 +372,13 @@ section {
   color: var(--main-color);
   font-size: 1.5em;
   font-weight: 600;
-  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
+  cursor:
+    url("./stickers/pointerPink.webp") 4 12,
+    pointer;
   overflow: hidden;
-  transition: border 300ms, color 300ms;
+  transition:
+    border 300ms,
+    color 300ms;
   user-select: none;
 }
 
@@ -370,14 +392,18 @@ section {
   z-index: 1;
   text-decoration: none;
   color: var(--main-color);
-  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
+  cursor:
+    url("./stickers/pointerPink.webp") 4 12,
+    pointer;
 }
 
 .button:hover a {
   color: black;
   box-shadow: 0 0 25px var(--main-color);
   transition: all 0.5s;
-  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
+  cursor:
+    url("./stickers/pointerPink.webp") 4 12,
+    pointer;
 }
 
 button:active {
@@ -393,7 +419,9 @@ button:active {
   background: var(--main-color);
   opacity: 60%;
   border-radius: 50%;
-  transition: transform 500ms, background 300ms;
+  transition:
+    transform 500ms,
+    background 300ms;
 }
 
 .button::before {
@@ -415,7 +443,9 @@ button:active {
   background: var(--main-color);
   opacity: 60%;
   border-radius: 50%;
-  transition: transform 500ms, background 300ms;
+  transition:
+    transform 500ms,
+    background 300ms;
 }
 
 .button2::before {
@@ -463,7 +493,9 @@ button:active {
   height: 4.3rem;
   border-left: 3px solid var(--main-color);
   right: -8px;
-  animation: cursor 0.6s infinite, typing 20s steps(15) infinite;
+  animation:
+    cursor 0.6s infinite,
+    typing 20s steps(15) infinite;
 }
 
 @keyframes cursor {
@@ -550,7 +582,9 @@ button:active {
 /*Services*/
 .service {
   background: var(--main-color);
-  cursor: url("./stickers/cursorBlack.webp") 4 12, auto;
+  cursor:
+    url("./stickers/cursorBlack.webp") 4 12,
+    auto;
 
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23cfcfcf' stroke-width='1' stroke-opacity='0.4' stroke-dasharray='2,1'%3E%3Cpath d='M0 20L20 20M20 0L20 20M0 0L20 0M0 20L0 0'/%3E%3C/g%3E%3C/svg%3E");
 }
@@ -627,7 +661,7 @@ button:active {
   font-family: "__handwritingTitle", "__handwritingText2", cursive;
 }
 
-.service-button {
+.tech-btn {
   padding: 5px 10px;
   margin-top: 10px;
   border: 3px solid #000000;
@@ -639,14 +673,14 @@ button:active {
   cursor: pointer;
 }
 
-.service-button:hover {
+.tech-btn:hover {
   translate: 1.5px 1.5px;
   box-shadow: 1.5px 1.5px 0 #000000;
   color: var(--text-color);
   background: var(--bg-color);
 }
 
-.service-button:active {
+.tech-btn:active {
   translate: 3px 3px;
   box-shadow: 0 0 0 #000000;
 }
@@ -699,7 +733,9 @@ button:active {
 
 .line {
   background: var(--main-color);
-  cursor: url("./stickers/cursorBlack.webp") 4 12, auto;
+  cursor:
+    url("./stickers/cursorBlack.webp") 4 12,
+    auto;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23cfcfcf' stroke-width='1' stroke-opacity='0.4' stroke-dasharray='2,1'%3E%3Cpath d='M0 20L20 20M20 0L20 20M0 0L20 0M0 20L0 0'/%3E%3C/g%3E%3C/svg%3E");
 }
 
@@ -729,7 +765,9 @@ button:active {
 /*Skills*/
 .skills {
   background: var(--main-color);
-  cursor: url("./stickers/cursorBlack.webp") 4 12, auto;
+  cursor:
+    url("./stickers/cursorBlack.webp") 4 12,
+    auto;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23cfcfcf' stroke-width='1' stroke-opacity='0.4' stroke-dasharray='2,1'%3E%3Cpath d='M0 20L20 20M20 0L20 20M0 0L20 0M0 20L0 0'/%3E%3C/g%3E%3C/svg%3E");
 }
 
@@ -825,7 +863,9 @@ button:active {
 
 /* Education */
 .education {
-  cursor: url("./stickers/cursorPink.webp") 4 12, auto;
+  cursor:
+    url("./stickers/cursorPink.webp") 4 12,
+    auto;
   background-color: var(--second-text-color);
 }
 
@@ -857,7 +897,9 @@ button:active {
   background-color: inherit;
   width: 50%;
   z-index: 10;
-  cursor: url("./stickers/cursorBlack.webp") 4 12, auto;
+  cursor:
+    url("./stickers/cursorBlack.webp") 4 12,
+    auto;
 }
 
 .education .container::after {
@@ -1064,7 +1106,9 @@ button:active {
 .project {
   padding: 2rem;
   background: var(--main-color);
-  cursor: url("./stickers/cursorBlack.webp") 4 12, auto;
+  cursor:
+    url("./stickers/cursorBlack.webp") 4 12,
+    auto;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23cfcfcf' stroke-width='1' stroke-opacity='0.4' stroke-dasharray='2,1'%3E%3Cpath d='M0 20L20 20M20 0L20 20M0 0L20 0M0 20L0 0'/%3E%3C/g%3E%3C/svg%3E");
 }
 
@@ -1072,72 +1116,176 @@ button:active {
   color: var(--second-text-color);
 }
 
-.project .slider {
-  width: 100%;
-  min-height: 75rem;
-  margin: 0 auto;
-  position: relative;
+.project-container{
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  padding:5rem;
+  gap: 5rem;
 }
 
-.project .slide {
+.prj-card {
+  width: 400px;
+}
+.browser-card {
+  position: relative;
+  width: 400px;
+  height: fit-content;
+  background: #fff185;
+  border-radius: 18px;
+  padding-top: 10px;
+  border: 3px solid #000;
+  /* box-shadow: 10px 10px 0 #000; */
+  box-shadow: rgba(0, 0, 0, 0.223) 10px 10px 5px;
+}
+
+.prj-card i {
+  color: #000;
+  width: 20px;
+  height: 20px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.controls {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.controls .window-control {
   position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  top: -20px;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.browser-header {
+  height: 50px;
+  background: #c9c6ff;
+  border-top-right-radius: 13px;
+  padding: 5px 5px 10px 5px;
+  /* margin-top: 15px; */
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+}
+
+.address-bar {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 1s;
+  height: 40px;
+  gap: 8px;
+  margin-bottom: 10px;
 }
 
-.project-section {
-  width: 80%;
+.search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 30px;
+  background: #fff;
+  border: 3px solid #000;
+  border-radius: 20px;
+}
+
+.search i {
+  margin: 8px 8px 0 8px;
+}
+
+.search p {
+  color: var(--second-text-color);
+  font-family: "Title", "__handwritingTitle", cursive;
+  font-size: 18px;
+}
+
+.avatar {
+  width: 24px;
+  height: 24px;
+  background-image: url("ninja1.png");
+  background-size: cover;
+}
+
+.browser-content {
+  margin: 8px;
+  border-radius: 18px;
+  border: 3px solid #000;
+  height: 250px;
+  background-size: cover;
+  background-position: top;
+}
+
+.controls button {
   position: relative;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.project-section::before {
-  content: "\201C";
   position: absolute;
-  top: -4.8rem;
-  left: -6.8rem;
-  line-height: 1;
-  font-size: 20rem;
-  font-family: inherit;
-  color: var(--third-text-color);
-  z-index: -1;
+  top: -25px;
+  left: -2px;
+  width: 120px;
+  height: 30px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 10px;
+  border: none;
+  border-top: 3px solid #000;
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #c9c6ff;
+  border-left: 3px solid #000;
+  background: #c9c6ff;
 }
 
-.prj-heading {
-  font-size: 5rem;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 2px var(--second-text-color);
+.controls button.active::after,
+button.active::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+}
+
+.controls button.active::after {
+  right: -10px;
+  border-bottom-left-radius: 18px;
+  border-bottom: 3px solid #000;
+  box-shadow: -3px 3px 0px 3px #c9c6ff;
+}
+
+.prj-info .prj-title{
+  margin-top: 10px;
+  font-size: 30px;
+  color: var(--second-text-color);
   font-family: "Title", "__handwritingTitle", cursive;
 }
 
-.project__info {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+.prj-info .prj-desc{
+  margin-top: 10px;
+  font-size: 20px;
   color: var(--second-text-color);
   font-family: "Text_bold", "__handwritingText", cursive;
   font-family: "__handwritingTitle", "__handwritingText2", cursive;
 }
-.project-section .img {
+
+.techstack {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 10px;
+  flex-wrap: wrap;
 }
-.project-img {
-  width: 60vw;
-  border-radius: 1rem;
-  border: 2px solid var(--second-text-color);
-  box-sizing: border-box;
+
+.techstack .tech-btn {
+  color: var(--second-text-color);
+  background: var(--third-text-color);
+}
+
+.techstack .tech-btn:hover {
+  color: var(--text-color);
+  background: var(--bg-color);
 }
 
 .btn-container {
@@ -1152,11 +1300,12 @@ button:active {
   border: none;
   transform: rotate(5deg);
   transform-origin: center;
-  /* font-family: "Gochi Hand", cursive; */
   font-family: "Text_bold", "__handwritingText", cursive;
   text-decoration: none;
   font-size: 20px;
-  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
+  cursor:
+    url("./stickers/pointerPink.webp") 4 12,
+    pointer;
   padding-bottom: 3px;
   border-radius: 5px;
   box-shadow: 0 2px 0 #494a4b;
@@ -1164,7 +1313,9 @@ button:active {
   background-color: var(--third-text-color);
 }
 .prj-btn a {
-  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
+  cursor:
+    url("./stickers/pointerPink.webp") 4 12,
+    pointer;
   color: var(--second-text-color);
 }
 
@@ -1182,57 +1333,8 @@ button:active {
   outline: 0;
 }
 
-.slider__btn {
-  position: absolute;
-  top: 48%;
-  width: 5rem;
-  height: 5rem;
-  z-index: 10;
-  border: none;
-  background: transparent;
-  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
-}
-
-.slider__btn img {
-  width: 100%;
-}
-
-.slider__btn--left {
-  left: 6%;
-  transform: translate(-50%, -50%);
-}
-
-.slider__btn--right {
-  right: 6%;
-  transform: translate(50%, -50%);
-}
 
 @media (max-width: 600px) and (min-width: 500px) {
-  .project .slider {
-    width: 100%;
-    min-height: 60rem;
-  }
-  .project .slide {
-    width: 100%;
-    height: 100%;
-  }
-
-  .project-section {
-    width: 80%;
-  }
-  .prj-heading {
-    font-size: 4.2rem;
-    margin-bottom: 2rem;
-  }
-
-  .project__info {
-    font-size: 2.3rem;
-    margin-bottom: 3rem;
-  }
-  .project-img {
-    width: 100%;
-  }
-
   .prj-btn {
     width: 100px;
     font-size: 18px;
@@ -1243,41 +1345,12 @@ button:active {
     padding: 0.3rem 0.8rem;
     border-radius: 5px;
     border: 1.5px solid #494a4b;
-  }
-
-  .slider__btn {
-    width: 4.5rem;
-    height: 4.5rem;
   }
 }
 @media (max-width: 500px) and (min-width: 400px) {
   .project {
     padding: 2rem;
   }
-  .project .slider {
-    width: 100%;
-    min-height: 60rem;
-  }
-
-  .project-section::before {
-    top: -2rem;
-    left: -3rem;
-    line-height: 0.5;
-    font-size: 12rem;
-  }
-
-  .prj-heading {
-    font-size: 4rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .project__info {
-    font-size: 2.5rem;
-    margin-bottom: 4rem;
-  }
-  .project-img {
-    width: 100%;
-  }
 
   .prj-btn {
     width: 100px;
@@ -1290,54 +1363,10 @@ button:active {
     border-radius: 5px;
     border: 1.5px solid #494a4b;
   }
-
-  .slider__btn {
-    width: 4rem;
-    height: 4rem;
-    top: 95%;
-  }
-
-  .slider__btn--left {
-    left: 20%;
-    transform: translate(-50%, -50%);
-  }
-
-  .slider__btn--right {
-    right: 20%;
-    transform: translate(50%, -50%);
-  }
 }
 @media (max-width: 400px) {
   .project {
     padding: 1rem;
-  }
-  .project .slider {
-    width: 100%;
-    min-height: 60rem;
-  }
-
-  .slide {
-    width: 100%;
-  }
-
-  .project-section::before {
-    top: -2rem;
-    left: -3rem;
-    line-height: 0.5;
-    font-size: 15rem;
-  }
-
-  .prj-heading {
-    font-size: 3.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .project__info {
-    font-size: 2.3rem;
-    margin-bottom: 3rem;
-  }
-  .project-img {
-    width: 100%;
   }
 
   .prj-btn {
@@ -1351,29 +1380,15 @@ button:active {
     border-radius: 5px;
     border: 1.5px solid #494a4b;
   }
-
-  .slider__btn {
-    width: 3.8rem;
-    height: 3.8rem;
-    top: 95%;
-  }
-
-  .slider__btn--left {
-    left: 30%;
-    transform: translate(-50%, -50%);
-  }
-
-  .slider__btn--right {
-    right: 30%;
-    transform: translate(50%, -50%);
-  }
 }
 
 /*Contact*/
 
 .contact {
   background: var(--main-color);
-  cursor: url("./stickers/cursorBlack.webp") 4 12, auto;
+  cursor:
+    url("./stickers/cursorBlack.webp") 4 12,
+    auto;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23cfcfcf' stroke-width='1' stroke-opacity='0.4' stroke-dasharray='2,1'%3E%3Cpath d='M0 20L20 20M20 0L20 20M0 0L20 0M0 20L0 0'/%3E%3C/g%3E%3C/svg%3E");
   border-bottom-left-radius: 7rem;
   border-bottom-right-radius: 7rem;
@@ -1429,7 +1444,9 @@ button:active {
   text-decoration: none;
   color: var(--second-text-color);
   font-size: 2.5rem;
-  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
+  cursor:
+    url("./stickers/pointerPink.webp") 4 12,
+    pointer;
 }
 
 .contact .contact-right form {
@@ -1456,7 +1473,9 @@ textarea::placeholder {
   color: var(--main-color);
   margin: 3rem 1.5rem 3rem 0;
   transition: 0.3s ease;
-  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
+  cursor:
+    url("./stickers/pointerPink.webp") 4 12,
+    pointer;
 }
 
 .contact .social-icon a:hover {
@@ -1465,7 +1484,6 @@ textarea::placeholder {
   box-shadow: 0 0 25px var(--bg-color);
   background: var(--main-color);
 }
-
 
 .contact .social-icon [data-tooltip]:hover:after {
   background: var(--second-text-color);
@@ -1509,14 +1527,18 @@ form textarea {
   border: 2px solid var(--second-text-color);
   transition: ease-in-out 0.5s;
   font-family: "Text_bold", "__handwritingText", cursive;
-  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
+  cursor:
+    url("./stickers/pointerPink.webp") 4 12,
+    pointer;
 }
 
 .btn-cv a {
   color: var(--second-text-color);
   font-size: 1.8rem;
   font-weight: 500;
-  cursor: url("./stickers/pointerPink.webp") 4 12, pointer;
+  cursor:
+    url("./stickers/pointerPink.webp") 4 12,
+    pointer;
 }
 
 @media screen and (max-width: 600px) {
@@ -1552,9 +1574,13 @@ form textarea {
   gap: 1rem;
   padding: 20px;
   font-size: 2rem;
-  transition: bottom 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transition:
+    bottom 0.5s ease-in-out,
+    opacity 0.5s ease-in-out;
   opacity: 0;
-  cursor: url("./stickers/cursorPink.webp") 4 12, auto;
+  cursor:
+    url("./stickers/cursorPink.webp") 4 12,
+    auto;
 }
 
 .footer.show {
