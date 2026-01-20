@@ -1116,12 +1116,12 @@ button:active {
   color: var(--second-text-color);
 }
 
-.project-container{
+.project-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding:5rem;
+  padding: 5rem;
   gap: 5rem;
 }
 
@@ -1130,7 +1130,7 @@ button:active {
 }
 .browser-card {
   position: relative;
-  width: 400px;
+  width: 100%;
   height: fit-content;
   background: #fff185;
   border-radius: 18px;
@@ -1141,11 +1141,15 @@ button:active {
 }
 
 .prj-card i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #000;
   width: 20px;
   height: 20px;
   font-weight: 700;
   font-size: 12px;
+  transition: 0.2s ease;
 }
 
 .controls {
@@ -1155,9 +1159,19 @@ button:active {
   justify-content: space-between;
   margin-top: 20px;
 }
+
+.prj-card i:hover {
+  background-color: #bdbdbd;
+}
+
+.controls i:nth-child(3):hover {
+  background-color: #e83636;
+  color: var(--text-color);
+}
+
 .controls .window-control {
   position: absolute;
-  top: -20px;
+  top: -25px;
   right: 0;
   display: flex;
   justify-content: flex-end;
@@ -1166,11 +1180,13 @@ button:active {
 }
 
 .browser-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 50px;
   background: #c9c6ff;
   border-top-right-radius: 13px;
-  padding: 5px 5px 10px 5px;
-  /* margin-top: 15px; */
+  padding: 5px;
   border-top: 3px solid #000;
   border-bottom: 3px solid #000;
 }
@@ -1179,17 +1195,19 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
   gap: 8px;
-  margin-bottom: 10px;
+}
+
+.address-bar i:hover{
+  border-radius: 50%;
 }
 
 .search {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   height: 30px;
+  width: 260px;
   background: #fff;
   border: 3px solid #000;
   border-radius: 20px;
@@ -1208,7 +1226,7 @@ button:active {
 .avatar {
   width: 24px;
   height: 24px;
-  background-image: url("ninja1.png");
+  background-image: url("logo/ninja1.webp");
   background-size: cover;
 }
 
@@ -1227,13 +1245,12 @@ button:active {
   top: -25px;
   left: -2px;
   width: 120px;
-  height: 30px;
+  height: 28px;
   border-top-left-radius: 18px;
   border-top-right-radius: 10px;
   border: none;
   border-top: 3px solid #000;
   border-right: 3px solid #000;
-  border-bottom: 3px solid #c9c6ff;
   border-left: 3px solid #000;
   background: #c9c6ff;
 }
@@ -1254,14 +1271,14 @@ button.active::before {
   box-shadow: -3px 3px 0px 3px #c9c6ff;
 }
 
-.prj-info .prj-title{
+.prj-info .prj-title {
   margin-top: 10px;
   font-size: 30px;
   color: var(--second-text-color);
   font-family: "Title", "__handwritingTitle", cursive;
 }
 
-.prj-info .prj-desc{
+.prj-info .prj-desc {
   margin-top: 10px;
   font-size: 20px;
   color: var(--second-text-color);
@@ -1333,46 +1350,76 @@ button.active::before {
   outline: 0;
 }
 
-
-@media (max-width: 600px) and (min-width: 500px) {
-  .prj-btn {
-    width: 100px;
-    font-size: 18px;
-    padding-bottom: 1.5px;
+@media (max-width: 940px) {
+  .project-container {
+    padding: 5rem 0rem;
   }
 
-  .prj-btn span {
-    padding: 0.3rem 0.8rem;
-    border-radius: 5px;
-    border: 1.5px solid #494a4b;
+  .prj-card {
+    width: 350px;
+  }
+
+  .controls {
+    margin-top: 18px;
+  }
+  .controls .window-control {
+    top: -23px;
+    margin-right: 8px;
+  }
+
+  .browser-header {
+    height: 48px;
+    border-top-right-radius: 13px;
+    padding: 5px;
+  }
+
+  .search {
+    height: 28px;
+    width: 210px;
+  }
+
+  .browser-content {
+    margin: 6px;
+    height: 210px;
+  }
+
+  .controls button {
+    top: -22px;
+    width: 120px;
+    height: 25px;
+  }
+
+  .controls button.active::after,
+  button.active::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: 0;
+  }
+
+  .controls button.active::after {
+    right: -10px;
+    border-bottom-left-radius: 18px;
+    border-bottom: 3px solid #000;
+    box-shadow: -3px 3px 0px 3px #c9c6ff;
+  }
+
+  .prj-info .prj-title {
+    margin-top: 10px;
+    font-size: 28px;
+  }
+
+  .prj-info .prj-desc {
+    margin-top: 10px;
+    font-size: 18px;
   }
 }
-@media (max-width: 500px) and (min-width: 400px) {
-  .project {
-    padding: 2rem;
-  }
 
+@media (max-width: 600px) {
   .prj-btn {
-    width: 100px;
+    width: 120px;
     font-size: 18px;
-    padding-bottom: 1.5px;
-  }
-
-  .prj-btn span {
-    padding: 0.3rem 0.8rem;
-    border-radius: 5px;
-    border: 1.5px solid #494a4b;
-  }
-}
-@media (max-width: 400px) {
-  .project {
-    padding: 1rem;
-  }
-
-  .prj-btn {
-    width: 100px;
-    font-size: 16px;
-    padding-bottom: 1.5px;
   }
 
   .prj-btn span {
