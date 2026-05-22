@@ -1138,7 +1138,7 @@ button:active {
 
 .project-container {
   display: flex;
-  align-items: center;
+  align-items:flex-start;
   justify-content: center;
   flex-wrap: wrap;
   padding: 5rem;
@@ -1207,7 +1207,7 @@ button:active {
   align-items: center;
   justify-content: center;
   height: 50px;
-  background: #ea96df;
+  background: #ffaad0;
   border-top-right-radius: 13px;
   padding: 5px;
   border-top: 3px solid #000;
@@ -1274,7 +1274,7 @@ button:active {
   border-top: 3px solid #000;
   border-right: 3px solid #000;
   border-left: 3px solid #000;
-  background: #ea96df;
+  background: #ffaad0;
   cursor: inherit;
 }
 
@@ -1291,7 +1291,7 @@ button.active::before {
   right: -10px;
   border-bottom-left-radius: 18px;
   border-bottom: 3px solid #000;
-  box-shadow: -3px 3px 0px 3px #ea96df;
+  box-shadow: -3px 3px 0px 3px #ffaad0;
 }
 
 .prj-info .prj-title {
